@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player</title>
+
+	<meta charset = "utf-8">
+	<meta name = "viewport" content= "width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link href = "style.css" rel ="stylesheet">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+	<div class="embedly-responsive">
+		<img src="https://i.vimeocdn.com/video/560697717_1280.jpg" data-src="%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fplayer.vimeo.com%252Fvideo%252F159048928%26url%3Dhttps%253A%252F%252Fvimeo.com%252F159048928%26image%3Dhttp%253A%252F%252Fi.vimeocdn.com%252Fvideo%252F560697717_1280.jpg%26key%3D1d5c48f7edc34c54bdae4c37b681ea2b%26type%3Dtext%252Fhtml%26schema%3Dvimeo"
+		/>
+		<a class="play" href="#">
+			<svg width="40" height="40">
+				<path stroke-linejoin="round" stroke="white" stroke-width="3" fill="white" d="M 5,5 L 5,25 20,15 Z"></path>
+			</svg>
+		</a>
+	</div>
+
+	<!-- player -->
+	<script src="script.js"></script>
+	<script type="text/javascript" src="//cdn.embed.ly/player-0.0.12.min.js"></script>
+
+	<script>
+	$(document).on('ready', function(){
+		$('iframes').each(function(){
+			var player = new playerjs.Player(this);
+			player.on('ready', function(){
+				player.play();
+			});
+		});
+	});
+	</script>
+
+
+</body>
+
+</html>
